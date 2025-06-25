@@ -4,6 +4,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
   BarChart, Bar, ResponsiveContainer
 } from "recharts";
+import PFCInputForm from "../components/PFCInputForm";
 
 const HomePage = () => {
   const [data, setData] = useState([]);
@@ -15,6 +16,8 @@ const HomePage = () => {
   return (
     <div style={{ padding: "1rem" }}>
       <h2>ホーム画面</h2>
+
+      <PFCInputForm />
 
       <h3>体重の推移（7日間）</h3>
       <ResponsiveContainer width="100%" height={300}>
