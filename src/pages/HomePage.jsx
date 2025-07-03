@@ -5,16 +5,6 @@ import {
   BarChart, Bar, ResponsiveContainer
 } from "recharts";
 import PFCInputForm from "../components/PFCInputForm";
-import {
-    BarChart,
-    Bar,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-    ResponsiveContainer,
-  } from "recharts";
 
 const HomePage = () => {
   const [data, setData] = useState([]);
@@ -44,20 +34,19 @@ const HomePage = () => {
       <h3>PFC摂取量の推移（7日間）</h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
-          data={data}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+            data={data}
+            margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="date" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="intake.protein" fill="#82ca9d" name="タンパク質" />
-          <Bar dataKey="intake.fat" fill="#ffc658" name="脂質" />
-          <Bar dataKey="intake.carbs" fill="#8884d8" name="糖質" />
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="date" />          {/* 横軸：日付（文字列） */}
+            <YAxis />                         {/* 縦軸：数値（PFC合計） */}
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="intake.protein" fill="#82ca9d" name="タンパク質" />
+            <Bar dataKey="intake.fat" fill="#ffc658" name="脂質" />
+            <Bar dataKey="intake.carbs" fill="#8884d8" name="糖質" />
         </BarChart>
-      </ResponsiveContainer>
-
+    </ResponsiveContainer>
     </div>
   );
 };
