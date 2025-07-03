@@ -7,6 +7,8 @@ import {
 import PFCInputForm from "../components/PFCInputForm";
 import DailyWeightInputForm from "../components/DailyWeightInputForm";
 import GoalProgressBar from "../components/GoalProgressBar";
+import WaterReminder from "../components/WaterReminder";
+
 
 
 
@@ -61,6 +63,7 @@ const HomePage = () => {
             <Bar dataKey="intake.carbs" fill="#8884d8" name="糖質" />
         </BarChart>
     </ResponsiveContainer>
+    <WaterReminder />
     </div>
   );
 };
