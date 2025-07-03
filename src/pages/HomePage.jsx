@@ -5,6 +5,8 @@ import {
   BarChart, Bar, ResponsiveContainer
 } from "recharts";
 import PFCInputForm from "../components/PFCInputForm";
+import DailyWeightInputForm from "../components/DailyWeightInputForm";
+
 
 const HomePage = () => {
   const [data, setData] = useState([]);
@@ -13,11 +15,18 @@ const HomePage = () => {
     setData(getLast7DaysRecords());
   }, []);
 
+  const reloadData = () => {
+    setData(getLast7DaysRecords());
+  };  
+
   return (
     <div style={{ padding: "1rem" }}>
       <h2>ホーム画面</h2>
 
-      <PFCInputForm />
+
+      <DailyWeightInputForm reloadData={reloadData} />
+      <PFCInputForm reloadData={reloadData} />
+
 
       <h3>体重の推移（7日間）</h3>
       <ResponsiveContainer width="100%" height={300}>
