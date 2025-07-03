@@ -9,8 +9,8 @@ const GoalProgressBar = ({ latestWeight }) => {
     return <p>体重データが不足しています</p>;
   }
 
-  const totalDiff = targetWeight - startWeight;
-  const currentDiff = latestWeight - startWeight;
+  const totalDiff = Math.abs(targetWeight - startWeight);
+  const currentDiff = Math.abs(latestWeight - startWeight);
 
   let progress = (currentDiff / totalDiff) * 100;
   // 減量の場合（目標体重 < 開始体重）、進捗率を逆にする
