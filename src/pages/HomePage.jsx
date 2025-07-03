@@ -23,6 +23,8 @@ const HomePage = () => {
     setData(getLast7DaysRecords());
   };  
 
+  const latestWeight = data.length > 0 ? data[data.length - 1].weight : null;
+
   return (
     <div style={{ padding: "1rem" }}>
       <h2>ホーム画面</h2>
@@ -44,7 +46,8 @@ const HomePage = () => {
         </LineChart>
       </ResponsiveContainer>
 
-      <GoalProgressBar latestWeight={data[data.length - 1]?.weight} />
+      <GoalProgressBar latestWeight={latestWeight} />
+
 
 
       <h3>PFC摂取量の推移（7日間）</h3>
