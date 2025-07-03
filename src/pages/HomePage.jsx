@@ -6,6 +6,8 @@ import {
 } from "recharts";
 import PFCInputForm from "../components/PFCInputForm";
 import DailyWeightInputForm from "../components/DailyWeightInputForm";
+import GoalProgressBar from "../components/GoalProgressBar";
+
 
 
 const HomePage = () => {
@@ -39,6 +41,9 @@ const HomePage = () => {
           <Line type="monotone" dataKey="weight" stroke="#8884d8" />
         </LineChart>
       </ResponsiveContainer>
+
+      <GoalProgressBar latestWeight={data[data.length - 1]?.weight} />
+
 
       <h3>PFC摂取量の推移（7日間）</h3>
       <ResponsiveContainer width="100%" height={300}>
