@@ -63,6 +63,8 @@ const HomePage = () => {
             <Bar dataKey="intake.carbs" fill="#8884d8" name="糖質" />
         </BarChart>
     </ResponsiveContainer>
+
+    <h3>水分補給のお知らせ</h3>
     <WaterReminder />
     </div>
   );
