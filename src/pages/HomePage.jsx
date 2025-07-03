@@ -8,9 +8,12 @@ import PFCInputForm from "../components/PFCInputForm";
 import DailyWeightInputForm from "../components/DailyWeightInputForm";
 import GoalProgressBar from "../components/GoalProgressBar";
 import WaterReminder from "../components/WaterReminder";
+import { subscribeUserToPush } from "../utils/pushNotification";
 
 
 
+
+<button onClick={subscribeUserToPush}>プッシュ通知を有効にする</button>
 
 const HomePage = () => {
   const [data, setData] = useState([]);
