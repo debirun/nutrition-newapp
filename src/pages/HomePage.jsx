@@ -52,9 +52,9 @@ const HomePage = () => {
             <YAxis />                         {/* 縦軸：数値（PFC合計） */}
             <Tooltip />
             <Legend />
-            <Bar dataKey="intake.protein" stackId="a" fill="#82ca9d" name="タンパク質" />
-            <Bar dataKey="intake.fat" stackId="a" fill="#ffc658" name="脂質" />
-            <Bar dataKey="intake.carbs" stackId="a" fill="#8884d8" name="糖質" />
+            <Bar dataKey="intake.protein" fill="#82ca9d" name="タンパク質" />
+            <Bar dataKey="intake.fat" fill="#ffc658" name="脂質" />
+            <Bar dataKey="intake.carbs" fill="#8884d8" name="糖質" />
         </BarChart>
     </ResponsiveContainer>
     </div>
