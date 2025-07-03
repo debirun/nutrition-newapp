@@ -23,7 +23,7 @@ const GoalProgressBar = ({ latestWeight }) => {
 
   return (
     <div>
-      <h3>目標達成度（目標体重: {targetWeight}kg）</h3>
+      <h3>目標達成度（目標体重: {targetWeight}kg）（現在体重: {latestWeight}kg）</h3>
       <div style={{
         width: "100%",
         background: "#eee",
